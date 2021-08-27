@@ -5,7 +5,7 @@ pacB='s3://wgs.algae.hifi/30-536540905/rawdata/fastX/CHK22.subreads.fastq.gz'
 
 
 process jFish {
-  memory '128G'
+  memory '256G'
   
   input:
   path pb from pacB
