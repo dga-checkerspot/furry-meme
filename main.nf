@@ -12,7 +12,7 @@ process jFish {
   memory '256G'
   
   input:
-  path pb from pacB_data
+  path pb from pacb_data
   
   output:
   file 'reads.histo' into jellyfishout
