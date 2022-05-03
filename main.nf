@@ -1,14 +1,18 @@
 #!/usr/bin/env nextflow
 
+params.pacB='s3://pipe.scratch.3/resources/hic/CHK*fastq.gz'
 
-pacB='s3://wgs.algae.hifi/30-536540905/rawdata/fastX/CHK22.subreads.fastq.gz'
+
+
+pacb_data = Channel.fromPath(params.pacB)
+
 
 
 process jFish {
   memory '256G'
   
   input:
-  path pb from pacB
+  path pb from pacB_data
   
   output:
   file 'reads.histo' into jellyfishout
